@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Assessment Sheet</title>
+  <style>
+    :root { --blue: #00008B; --bg: #f4faff; --chip: #e6f3ff; }
+    * { box-sizing: border-box; }
+
+    @page { size: A4; margin: 20mm; }
+
+    @media print {
+      html, body { width: 210mm; min-height: 297mm; }
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .section, li { break-inside: avoid; page-break-inside: avoid; }
+    }
+
+    html, body { margin: 0; background: #fff; }
+    body { font-family: Arial, sans-serif; color: var(--blue); }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #fff;
+    }
+
+    .sheet {
+      max-width: 190mm;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--blue);
+      padding-top: 0;
+    }
+
+    .col { width: 48%; }
+
+    .section { margin-bottom: 30px; }
+
+    .section h3 {
+      display: inline-block;
+      padding: 10px 17px;
+      font-weight: bold;
+      font-size: 16px;
+      border: 2px solid var(--blue);
+      color: var(--blue);
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 79px;
+      border-top-right-radius: 79px;
+      border-bottom-right-radius: 5px;
+      background-color: var(--bg);
+      margin: 0 0 8px 0;
+      font-family: Arial, sans-serif;
+    }
+
+    ul { list-style-type: none; padding-left: 0; margin: 0; color: var(--blue); }
+
+    li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--blue);
+    }
+
+    .label { flex: 1; color: var(--blue); }
+
+    .rating { display: flex; gap: 5px; color: var(--blue); }
+
+    .chip {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--blue);
+      border-radius: 4px;
+      text-align: center;
+      background-color: var(--chip);
+      line-height: 16px; /* 20 - 2*2 border */
+      font-size: 14px;
+      color: var(--blue);
+    }
+
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--blue);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="sheet">
+      <div class="col">
+        <div class="section">
+          <h3>Communication Skills</h3>
+          <ul>
+            <li>
+              <input type="checkbox">
+              <span class="label">I speak clearly</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">I respond to my teacher</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">I can communicate confidently with others</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Reading / Writing Skills</h3>
+          <ul>
+            <li>
+              <input type="checkbox">
+              <span class="label">I can say alphabets</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">I can say numbers</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">I can recite rhymes</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">I can say my name</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">I can trace basic shapes</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">I can draw patterns</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Correct grip to write and draw</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Count and match objects</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Conceptual Skills</h3>
+          <ul>
+            <li>
+              <input type="checkbox">
+              <span class="label">Identify primary colours</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Know the shapes</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Understand sizes</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Understand empty and full</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Understand more or less</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Understand close and open</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="section">
+          <h3>Motor Skills</h3>
+          <ul>
+            <li>
+              <input type="checkbox">
+              <span class="label">Hold a pencil/colour pencil</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Throw and catch a ball</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Jump, hop and skip</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Carry an object walking straight</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Hold and use a paint brush</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Hold and stick paper</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Creative Skills</h3>
+          <ul>
+            <li>
+              <input type="checkbox">
+              <span class="label">Imitate sounds and actions</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Draw and colour</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Sing and dance</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Express feelings through movements</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Social / Emotional Skills</h3>
+          <ul>
+            <li>
+              <input type="checkbox">
+              <span class="label">Happy to be in school</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Follow teacher's instructions</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Play with other children</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Take care of belongings</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox">
+              <span class="label">Express needs appropriately</span>
+              <div class="rating">
+                <div class="chip">🙂</div>
+                <div class="chip">🙂</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
